@@ -1,8 +1,11 @@
 
 <h2>Home</h2>
+<input ng-model="controller.search"
+       ng-model-options="{debounce:1000}"
+       ng-change="controller.fetch()" />
+
 <ul>
-    <li ng-repeat="movie in controller.movies">
-        {{movie.title}}
+    <li ng-repeat="car in controller.cars">
+      {{car.title}}
     </li>
 </ul>
-
